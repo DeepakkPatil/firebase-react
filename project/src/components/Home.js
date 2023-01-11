@@ -2,6 +2,26 @@ import React, { useEffect } from 'react';
 import { firestore } from '../firebase';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import styled from 'styled-components' ;
+
+//it is compoenent now we can use it anywhere
+const BlogHeading =styled.h1` 
+
+  text-align: center;
+  color: #2196f3;
+  margin-bottom: 2px;
+`
+
+const Subtitlep =styled.p`
+  font-size: 13px;
+  color : gray ;
+
+`
+
+
+
+
 function Home() {
   const [posts, setPosts] = useState([]);
 
@@ -28,7 +48,7 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>Tech Blog</h1>
+      <BlogHeading>Tech Blog</BlogHeading>
       <div id="blog-by">Deepak</div>
 
       { posts.map((post, index) => {return<div className="post" key={`post-${index}`}>
@@ -36,7 +56,7 @@ function Home() {
                 <h3>{post.title}</h3>
                 
             </Link>
-            <p>{post.subTitle}</p>
+            <Subtitlep>{post.subTitle}</Subtitlep>
         </div>})}
     </div>
   );

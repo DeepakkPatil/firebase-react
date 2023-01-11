@@ -2,6 +2,8 @@ import React from 'react'
  import { useState,useEffect } from 'react'
 import { firestore } from '../firebase'
 
+import Radium from 'radium' ;
+
 import { useParams  } from 'react-router-dom'
 
 function PostDetail() {
@@ -37,4 +39,11 @@ function PostDetail() {
   )
 }
 
-export default PostDetail
+export default Radium(PostDetail)
+
+const styles={
+
+  heading: {
+    backgroundColor :"red"
+  }
+}
