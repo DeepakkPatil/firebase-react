@@ -26,9 +26,7 @@ function PostDetail() {
      
     , [])
     
-//       const createMarkup = (text) => {
-//     return {__html: text.replace(/\n/g, '<br/>')};
-//   }
+
 
   return (
     <div className='post-detail'>
@@ -39,11 +37,4 @@ function PostDetail() {
   )
 }
 
-export default Radium(PostDetail)
-
-const styles={
-
-  heading: {
-    backgroundColor :"red"
-  }
-}
+export default PostDetail ;
